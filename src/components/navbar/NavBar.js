@@ -1,7 +1,7 @@
 import React from 'react';
 import NavItem from './NavItem';
-import { NavItems } from '../constants/NavItems';
-import { ReactComponent as PlaceholderLogo } from '../icons/placeholder-logo.svg';
+import { NavItems } from '../../constants/NavItems';
+import { ReactComponent as PlaceholderLogo } from '../../icons/placeholder-logo.svg';
 
 const NavBar = (props) => {
   return (
@@ -9,17 +9,18 @@ const NavBar = (props) => {
       <a href='/'>
         <PlaceholderLogo className='logo'/>
       </a>
-      <div className='navbar'>
+      <nav className='navbar'>
         {
-          NavItems.map((button, idx) => (
+          NavItems.map((item, idx) => (
             <NavItem
               key={idx}
-              url={button.url}
-              text={button.title}
+              url={item.url}
+              text={item.title}
+              dropdown={item.dropdown}
             />
           ))
         }
-      </div>
+      </nav>
     </div>
   );
 }

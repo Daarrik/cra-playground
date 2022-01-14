@@ -4,19 +4,19 @@ import About from './screens/About';
 import Home from './screens/Home';
 import Products from './screens/Products';
 
-import NavBar from './components/NavBar';
+import NavBar from './components/navbar/NavBar';
 
 const App = () => {
   return (
     <Router>
-      <div>
-        <NavBar />
+      <NavBar />
+      <div className='content-container'>
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/products' element={<Products />} />
+          <Route exact path='/about' element={<About />} />
+        </Routes>
       </div>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/products' element={<Products />} />
-        <Route path='/about' element={<About />} />
-      </Routes>
     </Router>
   );
 }
