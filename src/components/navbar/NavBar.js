@@ -3,22 +3,24 @@ import NavItem from './NavItem';
 import { NavItems } from '../../constants/NavItems';
 import { ReactComponent as PlaceholderLogo } from '../../icons/placeholder-logo.svg';
 
-const NavBar = (props) => {
+const NavBar = () => {
+  const navItems =
+    NavItems.map((navItem, idx) => (
+      <NavItem
+        key={idx}
+        title={navItem.title}
+        url={navItem.url}
+      />
+    ));
+
   return (
     <div className='header'>
       <a href='/'>
-        <PlaceholderLogo className='logo'/>
+        <PlaceholderLogo className='logo' />
       </a>
       <nav className='navbar'>
         {
-          NavItems.map((item, idx) => (
-            <NavItem
-              key={idx}
-              url={item.url}
-              text={item.title}
-              dropdown={item.dropdown}
-            />
-          ))
+          navItems
         }
       </nav>
     </div>
