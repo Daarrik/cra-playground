@@ -2,25 +2,23 @@ import React from 'react';
 import NavItem from './NavItem';
 import { NavItems } from '../../constants/NavItems';
 import { ReactComponent as PlaceholderLogo } from '../../icons/placeholder-logo.svg';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
-  const navItems =
-    NavItems.map((navItem, idx) => (
-      <NavItem
-        key={idx}
-        title={navItem.title}
-        url={navItem.url}
-      />
-    ));
-
   return (
     <div className='header'>
-      <a href='/'>
+      <Link to='/'>
         <PlaceholderLogo className='logo' />
-      </a>
+      </Link>
       <nav className='navbar'>
         {
-          navItems
+          NavItems.map((navItem, idx) => (
+            <NavItem
+              key={idx}
+              title={navItem.title}
+              url={navItem.url}
+            />
+          ))
         }
       </nav>
     </div>

@@ -66,6 +66,7 @@ ul {
   font-weight: 600;
   --button-size: calc(var(--nav-height) * 0.5);
   height: var(--button-size);
+  border-radius: 10px 10px 0 0;
   padding: 0 2rem;
   margin: 0;
   transition: 250ms;

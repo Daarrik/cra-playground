@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const NavItem = (props) => {
   return (
-    <a className='nav-item' href={props.url}>
+    <Link className='nav-item' to={props.url}>
       {props.title}
-    </a>
+    </Link>
   );
 }
 
