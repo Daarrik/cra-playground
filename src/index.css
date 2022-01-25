@@ -75,7 +75,6 @@ ul {
 .nav-item:hover,
 .nav-item:active {
   filter: brightness(1.2);
-  /* box-shadow: inset 0px -5px var(--text-color); */
 }
 
 .nav-item svg {
