@@ -1,10 +1,10 @@
 export const NavItems = [
   {
-    title: 'Products',
-    url: '/products',
+    title: "Products",
+    url: "/products",
   },
   {
-    title: 'About Us',
-    url: '/about',
+    title: "About Us",
+    url: "/about",
   },
 ];
