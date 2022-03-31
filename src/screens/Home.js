@@ -9,8 +9,8 @@ const Home = () => {
       setPing(!ping);
     }
 
-    const interval = setInterval(pingTest, 1000);
-    return () => clearInterval(interval);
+    const interval = setTimeout(pingTest, 1000);
+    return () => clearTimeout(interval);
   }, [ping]);
 
   return <div className="home-screen">Home</div>;
